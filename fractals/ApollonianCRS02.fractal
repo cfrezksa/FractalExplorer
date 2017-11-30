@@ -1,0 +1,29 @@
+Fractal Explorer
+ApollonianCRS02
+
+
+transformExponent float 2.0
+transformSpeed float 0.2
+shift vector3 0.0 0.0 0.0
+iterations int 12
+tmax float 1.5
+tmin float 0.03
+maxSteps int 60
+
+eyeOffset vector3  0 0 0;
+
+color0		    vector3    1.0     0.75    0.5 
+color1			vector3	   1.0     0.75    0.5 
+color2			vector3	   1.0     0.75    0.5 
+keyLightDir		vector3    0.577   0.577  -0.577
+backLightDir	vector3    -0.707  0.000   0.707
+ambientColor	vector3    0.4	    0.4     0.4  
+keyLightColor   vector3    2.0	    2.0     2.0 
+backLightColor  vector3    0.4	    0.4     0.4 
+diffuse			float   0.2
+specular		float   0.8
+fresnel			float   0.1
+shininess		float   20.0
+fogColorA		vector3  0 0 0 
+fogColorB		vector3  0 0 0 
+fogIntensity    float   1.0

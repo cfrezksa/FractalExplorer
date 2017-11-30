@@ -1,0 +1,47 @@
+Fractal Explorer
+SeaCreature
+
+iterations int 10
+tmax float 30.0
+tmin float 0.6
+maxSteps int 50
+
+eyeOffset vector3  0 0 0;
+
+scale           float 2.6
+boxFold		    float 1.0
+boxScale	    float 0.5
+sphereScale	    float 1.0
+fudgeFactor	    float 1.0
+
+
+fog			float  1.0
+fogFalloff	float  0.0003
+fogPower	float 3.0
+
+transformExponent float 2.0
+transformSpeed float 0.2
+shift vector3 0 0 0
+iterations int 16
+tmax float 2.0
+tmin float 0.01
+maxSteps int 50
+
+color0		    vector3    1.0     0.95    0.5 
+color1			vector3	   1.0     0.95    0.5 
+color2			vector3	   1.0     0.95    0.5 
+keyLightDir		vector3    0.577   0.577  -0.577
+backLightDir	vector3    -0.707  0.000   0.707
+ambientColor	vector3    0.0	    0.0     0.0  
+keyLightColor   vector3    4	    4     4 
+backLightColor  vector3    0.1	    0.1     0.1 
+diffuse			float   0.0
+specular		float   1
+fresnel			float   0.1
+shininess		float   200.0
+
+innerGlowColor		 vector3 1 0.7 0.3
+innerGlowIntensity	 float	 0.9
+
+outerGlowColor		 vector3 1 1 2
+outerGlowIntensity	 float	 0.1

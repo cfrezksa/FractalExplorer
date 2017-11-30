@@ -1,0 +1,15 @@
+FRACTAL SHADER ASSEMBLY
+begin assembly
+	main
+	render
+	traceFilament
+	ambientOcclusion
+	shading
+	fog
+	innerGlow
+	outerGlow
+	lighting_blinn_fresnel
+	estimateNormal
+	mandelbox
+end assembly
+

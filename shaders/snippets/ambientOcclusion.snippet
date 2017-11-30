@@ -1,0 +1,26 @@
+
+// -------------------- AMBIENT_OCCLUSION SNIPPET  -----------------------------------
+
+uniform float	aoSpread		= 3.4;	 
+uniform float	aoIntensity		= 0.2;	 
+uniform int		aoIterations	= 4;	 
+
+float ambientOcclusion(vec3 p, vec3 n, float eps)
+{
+	if (steps == 0) return 0.5;
+
+    float o = 1.0;                  // Start at full output colour intensity
+    eps *= aoSpread;                // Spread diffuses the effect
+    float k = aoIntensity / eps;    // Set intensity factor
+    float d = 2.0 * eps;            // Start ray a little off the surface
+    
+    for (int i = 0; i < aoIterations; ++i) {
+        o -= (d - sampleSpace(p + n * d)) * k;
+        d += eps;
+        k *= 0.5;                   // AO contribution drops as we move further from the surface 
+    }
+    
+    return clamp(o, 0.0, 1.0);
+}
+
+// -------------------- END OF AMBIENT_OCCLUSION SNIPPET  -----------------------------------

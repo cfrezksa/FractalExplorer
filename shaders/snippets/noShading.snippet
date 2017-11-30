@@ -1,0 +1,33 @@
+// -------------------------- SHADING SNIPPET  --------------------------------------
+
+uniform vec3 backgroundColor = vec3(0,0,0);
+
+vec3 N;
+vec4 albedo;
+
+vec3 shading() {
+	
+    N = vec3(0.0,0.0,0.0);
+
+    albedo = computeAlbedo();
+
+    vec3 col = albedo;
+
+	float ao = ambientOcclusion(rayPos, N, 0.001);
+	
+	applyInnerGlow(col);
+
+	applyFog(col);
+
+	return col * ao;
+}
+
+vec3 background() {
+
+	vec3 col = backgroundColor;
+	applyOuterGlow(col);
+	applyFog(col);
+	return col;
+}
+
+// -------------------- END OF SHADING SNIPPET  -----------------------------------

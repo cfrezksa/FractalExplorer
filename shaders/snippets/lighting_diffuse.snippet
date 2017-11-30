@@ -1,0 +1,12 @@
+// ------------------------ LIGHTING SNIPPET  -------------------------------------
+
+uniform float diffuse;
+
+vec3 lighting(vec3 L) {
+
+	float diff = max(0.0, dot(N,L));
+
+	return albedo.rgb * diffuse * diff;
+}
+
+// -------------------- END OF LIGHTING SNIPPET  ----------------------------------

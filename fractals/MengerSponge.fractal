@@ -1,0 +1,47 @@
+Fractal Explorer
+MengerSpongeA
+
+
+iterations int 5
+colorIterations int 5
+
+scale float 1
+surfaceDetail float 0.6
+surfaceSmoothness float 0.6
+boundingRadius float 5
+offset vector3 0.2 0.1 0.7
+objectRotation matrix3 1 0 0 0 1 0 0 0 1 
+fractalRotation1 matrix3 1 0 0 0 1 0 0 0 1 
+
+
+// --- coloring ---
+color1 vector3 1.00 1.00 1.00 
+color2 vector3 1.00 1.00 1.01 
+color3 vector3 0.20 1.00 1.01 
+
+color1Intensity float 0.9
+color2Intensity float 0.3
+color3Intensity float 0.3
+
+// --- fog ----
+fog float 0.00
+fogFalloff float 0
+
+// --- lighting ambient occlusion ---
+aoIntensity float 0.2
+aoSpread float 3.4
+
+// --- lighting Phong ---
+light vector3 174 210 -66
+specularExponent float 5000.0
+specularity float 0.7
+ambientColor vector2 0.0 0.0
+
+// --- lighting glow ---
+innerGlowColor vector3 0 0 0
+innerGlowIntensity float 0.02
+outerGlowColor vector3 1 1 1
+outerGlowIntensity float 0.0
+
+
+transparent bool 0

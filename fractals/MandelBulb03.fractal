@@ -1,0 +1,45 @@
+Fractal Explorer
+MandelBulb
+
+colorIterations int 8
+iterations int 8
+
+boundingRadius float 5
+gamma float 1.0 
+power float 5.0
+offset vector3 1.3 0.1 0
+surfaceDetail float 1.0
+surfaceSmoothness float 0.5
+
+// --- coloring ---
+color1 vector3 1 1 1
+color2 vector3 0.68 0.81 0.83
+color3 vector3 1 0.53 0
+
+color1Intensity float 0.66
+color2Intensity float 0.3
+color3Intensity float 0.6
+
+// --- fog ----
+fog float 0.00
+fogFalloff float 0
+
+// --- lighting ambient occlusion ---
+aoIntensity float 0.2
+aoSpread float 3.4
+
+// --- lighting Phong ---
+light vector3 174 210 -66
+specularExponent float 5
+specularity float 0.2
+ambientColor vector2 0.0 0.0
+
+// --- lighting glow ---
+innerGlowColor vector3 0 0 0
+innerGlowIntensity float 0.02
+outerGlowColor vector3 1 1 1
+outerGlowIntensity float 0.0
+
+rotation matrix3 1 0 0 0 1 0 0 0 1 
+
+transparent bool 0

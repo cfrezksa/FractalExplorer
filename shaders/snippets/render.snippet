@@ -1,0 +1,26 @@
+
+// ------------------------- RENDER SNIPPET  -----------------------------------
+
+float lambda;
+bool hit = false;
+
+float trace(vec3 r, vec3 d);
+vec3 shading();
+vec3 background();
+
+vec3 render( in vec3 rayOrigin, in vec3 rayDirection)
+{
+    vec3 col = vec3(0.0);
+    
+	lambda = trace(rayOrigin, rayDirection);
+    
+	if (hit && (lambda > 0.0 )) {
+		col = shading();
+    } else {
+		col = background();
+	}
+
+    return col;
+}
+
+// -------------------- END OF RENDER SNIPPET  -----------------------------------

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{129F3B10-0160-493C-AD47-360A2C3F4DE0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FractalsVR</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OVRSDKROOT)/LibOVR/Include/;$(OVRSDKROOT)/LibOVRKernel/Src/;$(SolutionDir)include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>FractalLib.lib;$(OVRSDKROOT)/LibOVR/Lib/Windows/$(Platform)/$(Configuration)/VS2015/LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OVRSDKROOT)/LibOVR/Include/;$(OVRSDKROOT)/LibOVRKernel/Src/;$(SolutionDir)include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <MinimalRebuild>false</MinimalRebuild>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>FractalLib.lib;$(OVRSDKROOT)/LibOVR/Lib/Windows/$(Platform)/$(Configuration)/VS2015/LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OVRSDKROOT)/LibOVR/Include/;$(OVRSDKROOT)/LibOVRKernel/Src/;$(SolutionDir)include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FractalLib.lib;$(OVRSDKROOT)/LibOVR/Lib/Windows/$(Platform)/$(Configuration)/VS2015/LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OVRSDKROOT)/LibOVR/Include/;$(OVRSDKROOT)/LibOVRKernel/Src/;$(SolutionDir)include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <AdditionalOptions>/d2Zi+ %(AdditionalOptions)</AdditionalOptions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalDependencies>FractalLib.lib;$(OVRSDKROOT)/LibOVR/Lib/Windows/$(Platform)/$(Configuration)/VS2015/LibOVR.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AddModuleNamesToAssembly>$(OVRSDKROOT)/LibOVR/Lib/Windows/$(Platform)/$(Configuration)/VS2015/</AddModuleNamesToAssembly>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="../src/GLE/CAPI_GLE.cpp" />
+    <ClCompile Include="..\src\core\main.cpp" />
+    <ClCompile Include="..\src\fractals\Fractal.cpp" />
+    <ClCompile Include="..\src\fractals\FractalScene.cpp" />
+    <ClCompile Include="..\src\gl\DepthBuffer.cpp" />
+    <ClCompile Include="..\src\gl\DrawCall.cpp" />
+    <ClCompile Include="..\src\gl\Geometry.cpp" />
+    <ClCompile Include="..\src\gl\ShaderProgram.cpp" />
+    <ClCompile Include="..\src\gl\TextureBuffer.cpp" />
+    <ClCompile Include="..\src\gl\VertexArrayObject.cpp" />
+    <ClCompile Include="..\src\vr\VRApplication.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\core\globalDefs.h" />
+    <ClInclude Include="..\include\fractals\Fractal.h" />
+    <ClInclude Include="..\include\fractals\FractalScene.h" />
+    <ClInclude Include="..\include\GLE\CAPI_GLE.h" />
+    <ClInclude Include="..\include\GLE\CAPI_GLE_GL.h" />
+    <ClInclude Include="..\include\gl\DepthBuffer.h" />
+    <ClInclude Include="..\include\gl\DrawCall.h" />
+    <ClInclude Include="..\include\gl\Geometry.h" />
+    <ClInclude Include="..\include\gl\GLBuffers.h" />
+    <ClInclude Include="..\include\gl\IGeometry.h" />
+    <ClInclude Include="..\include\gl\ShaderProgram.h" />
+    <ClInclude Include="..\include\gl\TextureBuffer.h" />
+    <ClInclude Include="..\include\gl\VertexArrayObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\fractals\Apollonian.fractal" />
+    <None Include="..\fractals\ApollonianCRS.fractal" />
+    <None Include="..\fractals\ApollonianCRS02.fractal" />
+    <None Include="..\fractals\Hellfire.fractal" />
+    <None Include="..\fractals\MandelBoxA.fractal" />
+    <None Include="..\fractals\MandelBoxB.fractal" />
+    <None Include="..\fractals\MandelBoxC.fractal" />
+    <None Include="..\fractals\MandelBulb01.fractal" />
+    <None Include="..\fractals\MandelBulb02.fractal" />
+    <None Include="..\fractals\MandelBulb03.fractal" />
+    <None Include="..\fractals\MandelBulb04b.fractal" />
+    <None Include="..\fractals\MandelBulb05b.fractal" />
+    <None Include="..\fractals\MengerSponge.fractal" />
+    <None Include="..\fractals\SpecialA.fractal" />
+    <None Include="..\fractals\SpecialB.fractal" />
+    <None Include="..\fractals\standard.fractal" />
+    <None Include="..\shaders\Apollonian.glsl" />
+    <None Include="..\shaders\ApollonianCRS01.glsl" />
+    <None Include="..\shaders\ApollonianCRS01_Backup.glsl" />
+    <None Include="..\shaders\ApollonianCRS02.glsl" />
+    <None Include="..\shaders\assemblies\default.assembly" />
+    <None Include="..\shaders\Hellfire.glsl" />
+    <None Include="..\shaders\MandelBoxA.glsl" />
+    <None Include="..\shaders\MandelBoxB.glsl" />
+    <None Include="..\shaders\MandelBoxC.glsl" />
+    <None Include="..\shaders\MandelBulb.glsl" />
+    <None Include="..\shaders\MandelBulbB.glsl" />
+    <None Include="..\shaders\MengerSpongeA.glsl" />
+    <None Include="..\shaders\MengerSpongeB.glsl" />
+    <None Include="..\shaders\snippets\ambientOcclusion.snippet" />
+    <None Include="..\shaders\snippets\estimateNormal.snippet" />
+    <None Include="..\shaders\snippets\fog.snippet" />
+    <None Include="..\shaders\snippets\innerGlow.snippet" />
+    <None Include="..\shaders\snippets\noAmbientOcclusion.snippet" />
+    <None Include="..\shaders\snippets\noLighting.snippet" />
+    <None Include="..\shaders\snippets\lighting_blinn.snippet" />
+    <None Include="..\shaders\snippets\lighting_blinn_fresnel.snippet" />
+    <None Include="..\shaders\snippets\lighting_diffuse.snippet" />
+    <None Include="..\shaders\snippets\main.snippet" />
+    <None Include="..\shaders\snippets\main_aa.snippet" />
+    <None Include="..\shaders\snippets\noFog.snippet" />
+    <None Include="..\shaders\snippets\noInnerGlow.snippet" />
+    <None Include="..\shaders\snippets\noOuterGlow.snippet" />
+    <None Include="..\shaders\snippets\outerGlow.snippet" />
+    <None Include="..\shaders\snippets\render.snippet" />
+    <None Include="..\shaders\snippets\shading.snippet" />
+    <None Include="..\shaders\snippets\trace.snippet" />
+    <None Include="..\shaders\snippets\traceFilament.snippet" />
+    <None Include="..\shaders\snippets\traceUniform.snippet" />
+    <None Include="..\shaders\Special.glsl" />
+    <None Include="..\shaders\SphereSponge.glsl" />
+    <None Include="..\shaders\standardFP.glsl" />
+    <None Include="..\shaders\standardFP_Backup.glsl" />
+    <None Include="..\shaders\standardFP_C.glsl" />
+    <None Include="..\shaders\standardFP_work.glsl" />
+    <None Include="..\shaders\standardVP.glsl" />
+    <None Include="..\shaders\standardVP_C.glsl" />
+    <None Include="..\shaders\test.glsl" />
+    <None Include="..\shaders\testFP.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

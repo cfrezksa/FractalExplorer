@@ -1,0 +1,85 @@
+
+// ------------------------ FRACTAL SNIPPET  ----------------------------
+
+uniform int		iterations = 6;
+uniform int		colorIterations = 4;
+uniform float	smoothing = 0.95;
+
+uniform vec3	color0;
+uniform vec3	color1;
+uniform vec3	color2;
+
+uniform float	scale;
+uniform float	boxFold = 1.0;
+uniform float	boxScale = 0.5;
+uniform float	sphereScale = 1.0;
+uniform float	fudgeFactor = 0.0;
+uniform vec3	offset = vec3(0.2,0.3,0.1);
+uniform mat3	fractalTransform1 = mat3(1,0,0, 0,1,0, 0,0,1);
+uniform mat3	fractalTransform2 = mat3(1,0,0, 0,1,0, 0,0,1);
+
+// --- FRACTAL INTERNAL PARAMETERS ---
+
+float minRadius2 = boxScale * boxScale;    // Min radius
+float fixedRadius2 = sphereScale * minRadius2;      // Fixed radius
+vec2  scaleFactor = vec2(scale, abs(scale)) / minRadius2;
+
+uniform float time;
+
+vec4 orb;
+
+float sampleSpace( vec3 vecPos)
+{
+	float minDist2 = 1000.0;
+    vec3 c = vecPos;
+    
+	orb = vec4(10000.0,1,0,1);
+
+    // dist2 estimate
+    vec4 p = vec4(vecPos, 1.0);
+	vec4 p0 = p;  // p.w is knighty's DEfactor
+    
+    for (int i = 0; i < iterations; i++) {
+        // box fold:
+        // if (p > 1.0) {
+        //   p = 2.0 - p;
+        // } else if (p < -1.0) {
+        //   p = -2.0 - p;
+        // }
+        p.xyz = clamp(p.xyz, -boxFold, boxFold) * 2.0 * boxFold - p.xyz;  // box fold
+        p.xyz *= fractalTransform1;
+        
+		  // sphere fold:
+        // if (dist2 < minRad2) {
+        //   p /= minRad2;
+        // } else if (dist2 < 1.0) {
+        //   p /= dist2;
+        // }
+        float dist2 = dot(p.xyz, p.xyz);
+        p.xyzw *= clamp(max(fixedRadius2 / dist2, minRadius2), 0.0, 1.0);  // sphere fold
+        
+        p.xyzw = p * scaleFactor.xxxy + p0 + vec4(offset, 0.0);
+        p.xyz *= fractalTransform2;
+
+        if (i < colorIterations) {
+            minDist2 = min(minDist2, dist2);
+            c = p.xyz;
+        }
+    }
+    
+	float distEstimate = ((length(p.xyz) - fudgeFactor) / p.w);
+
+	orb = vec4(distEstimate, minDist2, 0.33 * log(dot(c, c)) + 1.0, 1);
+    
+	// Return dist2 estimate, min dist2, fractional iteration count
+    return distEstimate * smoothing; 
+
+}
+
+vec4 computeAlbedo() {
+
+	vec2 b = clamp(orb.yz, 0.0, 1.0);
+	vec3 rgb = mix(color0, mix(color1, color2, b.x), b.y);
+	
+	return vec4(rgb,1);
+}

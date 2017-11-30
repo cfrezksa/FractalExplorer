@@ -1,0 +1,20 @@
+// ------------------------ LIGHTING SNIPPET  -------------------------------------
+
+uniform float diffuse;
+uniform float specular;
+uniform float shininess;
+uniform float fresnel;
+
+vec3 lighting(vec3 L) {
+
+	vec3 H = normalize(L+V);
+	float diff = max(0.0, dot(N,L));
+	float spec = pow(max(0.0,dot(N,H)),shininess);
+	if (diff == 0.0) spec = 0.0;
+
+	float f = mix(1.0,pow(1.0 - dot(V,N), 4.0), fresnel);
+
+	return albedo.rgb * diffuse * diff + (spec * specular * f) * vec3(1,1,1);
+}
+
+// -------------------- END OF LIGHTING SNIPPET  ----------------------------------

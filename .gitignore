@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio stuff
+*.user
+*.tlog
+*.log
+*.idb
+*.ilk
+*.pdb
+*.lastbuildstate
+/.vs/FractalExplorer/v15

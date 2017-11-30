@@ -1,0 +1,25 @@
+
+// ------------------------ ESTIMATE NORMAL SNIPPET  -------------------------------------
+
+uniform float epsilon = 0.001;
+
+vec3 estimateNormal( in vec3 pos)
+{
+	if (steps == 0) return -rayDirection;
+
+	vec3 gradMin = vec3(
+		sampleSpace(pos - vec3(epsilon, 0, 0)),
+		sampleSpace(pos - vec3(0, epsilon, 0)),
+		sampleSpace(pos - vec3(0, 0, epsilon)));
+	
+
+	vec3 gradMax = vec3(
+		sampleSpace(pos + vec3(epsilon, 0, 0)),
+		sampleSpace(pos + vec3(0, epsilon, 0)),
+		sampleSpace(pos + vec3(0, 0, epsilon)));
+
+	return normalize(gradMax-gradMin);
+}
+
+// ------------------------ END OF ESTIMATE NORMAL SNIPPET  ----------------------------
+

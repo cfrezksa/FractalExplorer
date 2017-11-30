@@ -1,0 +1,42 @@
+Fractal Explorer
+MandelBulb
+
+
+colorIterations int 5
+iterations int 5
+
+aoIntensity float 0.4
+aoSpread float 3.4
+boundingRadius float 5
+cameraFocalLength float 0.6
+color1Intensity float 0.66
+color2Intensity float 0.3
+color3Intensity float 0.6
+fog float 0.00
+fogFalloff float 0
+gamma float 1
+power float 1.8
+innerGlowIntensity float 0.12
+outerGlowIntensity float 0
+power float 8
+specularExponent float 70
+specularity float 0.81
+surfaceDetail float 0.9
+surfaceSmoothness float 0.2
+transparent bool 0
+ambientColor vector2 0.44 0.5
+outputSize vector2 1024 1024
+screenResolution vector2 1024 1024
+//background1Color vector3 0.866667 0.913725 0.623529
+//background2Color vector3 0.0980392 0.156863 0.160784
+camPos vector3 0 0 -2
+color1 vector3 1 1 1
+color2 vector3 0.68 0.81 0.83
+color3 vector3 1 0.53 0
+innerGlowColor vector3 0 0.6 0.819608
+light vector3 174 210 -66
+offset vector3 0 0 0
+outerGlowColor vector3 1 1 1
+shift vector3 0 0 0
+cameraRotation matrix3 1 0 0 0 1 0 0 0 1 
+rotation matrix3 1 0 0 0 1 0 0 0 1 

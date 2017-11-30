@@ -1,0 +1,16 @@
+
+// ------------------------ INNER GLOW SNIPPET  -------------------------------------
+
+uniform vec3 innerGlowColor = vec3(0,0,4);
+uniform float innerGlowIntensity = 0.05;
+
+void applyInnerGlow(inout vec3 col) {
+
+	float glowAmount = float(steps)/float(maxSteps);
+    float glow = clamp(glowAmount * innerGlowIntensity * 3.0, 0.0, 1.0);
+
+	col = mix(col, innerGlowColor, glow);
+	
+}
+
+// -------------------- END OF INNER GLOW SNIPPET  -----------------------------------

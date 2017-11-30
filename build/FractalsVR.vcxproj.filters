@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\gl">
+      <UniqueIdentifier>{30e9f651-1249-40e9-a899-38f541572e5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{1db516d7-609f-4817-9772-c84813beb365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gl">
+      <UniqueIdentifier>{6a71da16-2316-43e0-a6a5-84dafe56f9da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{77a867ea-2e7f-44af-a202-4f3d9f52aa9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GLE">
+      <UniqueIdentifier>{5afeb7b7-164a-4ceb-af46-8b7e74f53b90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{499927d1-5bbc-4d1f-927c-fc157b0aebca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\fractals">
+      <UniqueIdentifier>{09f3fcc5-fd73-4635-a7c0-02a14ccc9f47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\snippets">
+      <UniqueIdentifier>{314e3d3d-339e-40ee-8dc6-c51d6ee6bc93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assemblies">
+      <UniqueIdentifier>{0692c292-18d9-46e7-9f72-ca9ab6379290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GLE">
+      <UniqueIdentifier>{7c7f52f6-58fd-4d7a-a9bb-99dd84d6485c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fractals">
+      <UniqueIdentifier>{90c0e362-f8aa-4ce9-8788-2ef129a195fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vr">
+      <UniqueIdentifier>{28b8b242-8bb0-4bc9-b1cc-153579d61671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fractals">
+      <UniqueIdentifier>{1c602cd7-0917-4913-a74e-bd2c41c77ad9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\gl\DepthBuffer.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl\DrawCall.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl\Geometry.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl\TextureBuffer.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/GLE/CAPI_GLE.cpp">
+      <Filter>Source Files\GLE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl\ShaderProgram.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl\VertexArrayObject.cpp">
+      <Filter>Source Files\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\main.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\vr\VRApplication.cpp">
+      <Filter>Source Files\vr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fractals\Fractal.cpp">
+      <Filter>Source Files\fractals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fractals\FractalScene.cpp">
+      <Filter>Source Files\fractals</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\core\globalDefs.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\DepthBuffer.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\DrawCall.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\Geometry.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\GLBuffers.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\IGeometry.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\ShaderProgram.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\TextureBuffer.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gl\VertexArrayObject.h">
+      <Filter>Header Files\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GLE\CAPI_GLE.h">
+      <Filter>Header Files\GLE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GLE\CAPI_GLE_GL.h">
+      <Filter>Header Files\GLE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fractals\Fractal.h">
+      <Filter>Header Files\fractals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fractals\FractalScene.h">
+      <Filter>Header Files\fractals</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\standardVP.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\standardFP.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\Apollonian.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\testFP.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\fractals\Apollonian.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\shaders\ApollonianCRS01.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\fractals\ApollonianCRS.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\standard.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MandelBulb01.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\shaders\MandelBulb.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\fractals\MandelBulb02.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MandelBulb03.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MandelBulb04b.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MandelBulb05b.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\shaders\MandelBoxA.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\MandelBulbB.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\MengerSpongeA.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\SphereSponge.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\fractals\MandelBoxA.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MandelBoxC.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MengerSponge.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\SpecialA.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\SpecialB.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\shaders\MandelBoxC.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\Special.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\fractals\ApollonianCRS02.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\shaders\snippets\main.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\lighting_blinn.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\lighting_blinn_fresnel.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\lighting_diffuse.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\main_aa.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\render.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\shading.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\trace.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\traceFilament.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\traceUniform.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\MandelBoxB.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\fractals\Hellfire.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\fractals\MandelBoxB.fractal">
+      <Filter>Resource Files\fractals</Filter>
+    </None>
+    <None Include="..\shaders\ApollonianCRS01_Backup.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\ApollonianCRS02.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\Hellfire.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\MengerSpongeB.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\standardFP_Backup.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\standardFP_C.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\standardFP_work.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\standardVP_C.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\test.glsl">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="..\shaders\snippets\noAmbientOcclusion.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\ambientOcclusion.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\estimateNormal.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\fog.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\innerGlow.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\noFog.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\noInnerGlow.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\noOuterGlow.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\outerGlow.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\snippets\noLighting.snippet">
+      <Filter>Resource Files\snippets</Filter>
+    </None>
+    <None Include="..\shaders\assemblies\default.assembly">
+      <Filter>Resource Files\assemblies</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+
+// ------------------------ FOG SNIPPET  -------------------------------------
+
+uniform float fog = 0.5;
+uniform float fogFalloff = 0.001;
+uniform float fogPower = 1.0;
+
+void applyFog(inout vec3 col) {
+	col = mix(backgroundColor, col, exp(-pow((lambda-tmin) * exp(fogFalloff), fogPower) * fog));
+}
+
+// -------------------- END OF FOG SNIPPET  -----------------------------------

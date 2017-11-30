@@ -1,0 +1,29 @@
+Fractal Explorer
+MandelBoxC
+
+iterations int 10
+tmax float 10.0
+tmin float 1.0
+maxSteps int 50
+
+eyeOffset vector3  0 0 -3;
+
+scale           float 2.6
+boxFold		    float 1.0
+boxScale	    float 0.5
+sphereScale	    float 1.0
+fudgeFactor	    float 0.0
+
+color0		    vector3   0 0 0
+color1			vector3	  1 0.8 0.2 
+color2			vector3	  1 1 1 
+keyLightDir		vector3    0.577   0.577  -0.577
+backLightDir	vector3    -0.707  0.000   0.707
+ambientColor	vector3    0.0	    0.0     0.0  
+keyLightColor   vector3    0.6	    0.6     0.6 
+backLightColor  vector3    0.1	    0.1     0.1 
+diffuse			float   0.2
+specular		float   0.8
+fresnel			float   0.1
+shininess		float   4.0
+fogIntensity    float   0.002

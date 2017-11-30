@@ -1,0 +1,16 @@
+
+// ------------------------ OUTER GLOW SNIPPET  -------------------------------------
+
+uniform vec3 outerGlowColor = vec3(1,0,0);
+uniform float outerGlowIntensity = 0.02;
+
+void applyOuterGlow(inout vec3 col) {
+
+	float glowAmount = float(steps)/float(maxSteps);
+    float glow = clamp(glowAmount * outerGlowIntensity * 3.0, 0.0, 1.0);
+
+	col.rgb = mix(col.rgb, outerGlowColor, glow);
+}
+
+// -------------------- END OF OUTER GLOW SNIPPET  -----------------------------------
+

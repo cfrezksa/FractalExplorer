@@ -1,0 +1,50 @@
+Fractal Explorer
+Special
+
+iterations int 5
+colorIterations int 5
+
+scale float -2.81
+surfaceDetail float 0.66
+surfaceSmoothness float 0.3
+boundingRadius float 114.0
+offset vector3 0 0 0
+objectRotation matrix3 1 0 0 0 1 0 0 0 1 
+fractalRotation1 matrix3 1 0 0 0 1 0 0 0 1 
+fractalRotation2 matrix3 1 0 0 0 1 0 0 0 1 
+sphereScale   float 1     
+boxScale	  float 0.5    
+boxFold       float 1     
+fudgeFactor   float 0    
+
+// --- coloring ---
+color1 vector3 1.00 1.00 1.00 
+color2 vector3 1.00 0.80 0.01 
+color3 vector3 0.10 0.10 0.10 
+
+color1Intensity float 0.96
+color2Intensity float 0.1.26
+color3Intensity float 0.51
+
+// --- fog ----
+fog float 0.00
+fogFalloff float 0
+
+// --- lighting ambient occlusion ---
+aoIntensity float 0.2
+aoSpread float 3.4
+
+// --- lighting Phong ---
+light vector3 174 210 -66
+specularExponent float 5000.0
+specularity float 0.7
+ambientColor vector2 0.0 0.0
+
+// --- lighting glow ---
+innerGlowColor vector3 0 0 0
+innerGlowIntensity float 0.02
+outerGlowColor vector3 1 1 1
+outerGlowIntensity float 0.0
+
+
+transparent bool 0
